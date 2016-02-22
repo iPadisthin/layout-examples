@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Layout Examples</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             /* apply a natural box layout model to all elements, but allowing components to change */
             html {
@@ -61,7 +60,9 @@
                 margin-right: 0;
             }
             
-
+            .container.percentageChildren {
+                width: 80%;
+            }
             .container.percentageChildren header {
                 width: 97.959%;
                 margin: 1.0204%;
@@ -79,34 +80,13 @@
     <body>
         
         <div class="container" style="background: #fff; text-align: left;">
-            <h1>Fixed Layout</h1>
-            <p>A fixed layout has a fixed width outer container.</p>
-            <p>Containers within it can use pixels, percentages or ems for width</p>
-        </div>
-        
-        <div class="container clearfix">
-            <p>width: 980px</p>
-            <header>
-                <p style="padding: 30px 0;">width: 960px,<br> margin: 10px</p>
-            </header>
-            <article>
-                <p style="padding: 200px 0;">width: 520px,<br> margin: 10px</p>
-            </article>
-            <aside>
-                <p style="padding: 200px 0;">width: 200px,<br> margin: 10px</p>
-            </aside>
-            <aside>
-                <p style="padding: 200px 0;">width: 200px,<br> margin: 10px</p>
-            </aside>
-        </div>
-        
-        <div class="container" style="background: #fff; text-align: left;">
-            <h2>Even if inner containers use percentages (or ems) for width, its still a fixed width layout because outer container fixed.</h2>
+            <h1>Fluid Layout</h1>
+            <p>A fluid layout has all containers including the outer container set in percentage.</p>
         </div>
         
         
         <div class="container clearfix percentageChildren">
-            <p>width: 980px</p>
+            <p>width: 80%;</p>
             <header>
                 <p style="padding: 30px 0;">width: 97.959%,<br> margin: 1.0204%</p>
             </header>
