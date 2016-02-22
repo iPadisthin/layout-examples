@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Layout Examples</title>
+        <style>
+            /*
+             * Clearfix: contain floats
+             *
+             * For modern browsers
+             * 1. The space content is one way to avoid an Opera bug when the
+             *    `contenteditable` attribute is included anywhere else in the document.
+             *    Otherwise it causes space to appear at the top and bottom of elements
+             *    that receive the `clearfix` class.
+             * 2. The use of `table` rather than `block` is only necessary if using
+             *    `:before` to contain the top-margins of child elements.
+             */
+
+            .clearfix:before,
+            .clearfix:after {
+                content: " "; /* 1 */
+                display: table; /* 2 */
+            }
+
+            .clearfix:after {
+                clear: both;
+            }
+            .container {
+                width: 980px;
+                margin: 0 auto;
+                background: #eee;
+                
+                text-align: center;
+            }
+            .container header {
+                width: 960px;
+                margin: 10px;
+                background: #ccc;
+            }
+            .container article {
+                float: left;
+                width: 520px;
+                margin: 10px;
+                background: #ccc;
+            }
+            .container aside {
+                float: left;
+                width: 200px;
+                margin: 10px;
+                background: #ccc;
+            }
+            .container aside:last-child {
+                margin-right: 0;
+            }
+            
+
+            .container.percentageChildren header {
+                width: 97.959%;
+                margin: 1.0204%;
+            }
+            .container.percentageChildren article {
+                width: 53.061%;
+                margin: 1.0204%;
+            }
+            .container.percentageChildren aside {
+                width: 20.408%;
+                margin: 1.0204%;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="container" style="background: #fff; text-align: left;">
+            <h1>Fixed Layout</h1>
+            <p>A fixed layout has a fixed width outer container.</p>
+            <p>Containers within it can use pixels, percentages or ems for width</p>
+        </div>
+        
+        <div class="container clearfix">
+            <p>width: 980px</p>
+            <header>
+                <p style="padding: 30px 0;">width: 960px,<br> margin: 10px</p>
+            </header>
+            <article>
+                <p style="padding: 200px 0;">width: 520px,<br> margin: 10px</p>
+            </article>
+            <aside>
+                <p style="padding: 200px 0;">width: 200px,<br> margin: 10px</p>
+            </aside>
+            <aside>
+                <p style="padding: 200px 0;">width: 200px,<br> margin: 10px</p>
+            </aside>
+        </div>
+        
+        <div class="container" style="background: #fff; text-align: left;">
+            <h2>Even if inner containers use percentages (or ems) for width, its still a fixed width layout because outer container fixed.</h2>
+        </div>
+        
+        
+        <div class="container clearfix percentageChildren">
+            <p>width: 980px</p>
+            <header>
+                <p style="padding: 30px 0;">width: 97.959%,<br> margin: 1.0204%</p>
+            </header>
+            <article>
+                <p style="padding: 200px 0;">width: 53.061%,<br> margin: 1.0204%</p>
+            </article>
+            <aside>
+                <p style="padding: 200px 0;">width: 20.408%,<br> margin: 1.0204%</p>
+            </aside>
+            <aside>
+                <p style="padding: 200px 0;">width: 20.408%,<br> margin: 1.0204%</p>
+            </aside>
+        </div>
+    </body>
+</html>
