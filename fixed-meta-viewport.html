@@ -5,6 +5,13 @@
         <title>Layout Examples</title>
         <meta name="viewport" content="width=device-width">
         <style>
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+              box-sizing: border-box;
+            }
+            *, *:before, *:after {
+              box-sizing: inherit;
+            }
             /*
              * Clearfix: contain floats
              *
