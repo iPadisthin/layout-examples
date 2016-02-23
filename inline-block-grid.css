@@ -37,7 +37,18 @@ html {
 .one-fifth,
 .two-fifths,
 .three-fifths,
-.four-fifths {
+.four-fifths,
+.one-twelth,
+.two-twelths,
+.three-twelths,
+.four-twelths,
+.five-twelths,
+.six-twelths,
+.seven-twelths,
+.eight-twelths,
+.nine-twelths,
+.ten-twelths,
+.eleven-twelths {
     display: inline-block;
     vertical-align: top;
     padding: 10px;
@@ -48,35 +59,56 @@ html {
 .full-width {
     display: block;
 }
-.one-half {
-    width: 50%;
+.one-twelth {
+    width: 8.333%;
 }
-.one-quarter {
-    width: 25%;
-}
-.two-quarters {
-    width: 50%;   
-}
-.three-quarters {
-    width: 75%;
-}
-.one-third {
-    width: 33.333%;
-}
-.two-thirds {
-    width: 66.667%;
+.two-twelths {
+    width: 16.667%;
 }
 .one-fifth {
     width: 20%;
 }
+.one-quarter,
+.three-twelths {
+    width: 25%;
+}
+.one-third,
+.four-twelths {
+    width: 33.333%;
+}
 .two-fifths {
     width: 40%;
+}
+.five-twelths {
+    width: 41.667%;
+}
+.one-half,
+.two-quarters,
+.six-twelths {
+    width: 50%;
+}
+.seven-twelths {
+    width: 58.333%;
 }
 .three-fifths {
     width: 60%;
 }
+.two-thirds,
+.eight-twelths {
+    width: 66.667%;
+}
+.three-quarters,
+.nine-twelths {
+    width: 75%;
+}
 .four-fifths {
     width: 80%;
+}
+.ten-twelths {
+    width: 83.333%;
+}
+.eleven-twelths {
+    width: 91.667%;
 }
 
 /* just to see grid boxes */
