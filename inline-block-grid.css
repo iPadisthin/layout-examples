@@ -1,8 +1,11 @@
 @import url('//cdn.jsdelivr.net/font-zero-width/latest/zero-width.css');
+/* https://github.com/patrickkunka/zero-width */
 
 body {
     margin: 0;
 }
+
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
@@ -10,7 +13,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 
 /*
  * This grid system uses the zero-width font https://github.com/patrickkunka/zero-width
@@ -20,12 +22,16 @@ html {
     font-family: 'zero-width';
     font-size: 0;
     
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: 960px; /* change to suit */
+    margin: 0 auto; /* to center grid */
 }
 .grid > * {
-    font-family: 'helvetica';
-    font-size: 1rem; 
+    font-family: 'helvetica', sans-serif; /* whatever font you want */
+    /* 
+     * if you are using a different base font-size then change this to be the same
+     * if you don't care about ie8 you can change this to
+     */
+    font-size: 16px; 
 }
 .full-width,
 .one-half,
@@ -60,10 +66,10 @@ html {
     display: block;
 }
 .one-twelth {
-    width: 8.333%;
+    width: 8.33333%;
 }
 .two-twelths {
-    width: 16.667%;
+    width: 16.66667%;
 }
 .one-fifth {
     width: 20%;
@@ -74,13 +80,13 @@ html {
 }
 .one-third,
 .four-twelths {
-    width: 33.333%;
+    width: 33.33333%;
 }
 .two-fifths {
     width: 40%;
 }
 .five-twelths {
-    width: 41.667%;
+    width: 41.66667%;
 }
 .one-half,
 .two-quarters,
@@ -88,14 +94,14 @@ html {
     width: 50%;
 }
 .seven-twelths {
-    width: 58.333%;
+    width: 58.33333%;
 }
 .three-fifths {
     width: 60%;
 }
 .two-thirds,
 .eight-twelths {
-    width: 66.667%;
+    width: 66.66667%;
 }
 .three-quarters,
 .nine-twelths {
@@ -105,10 +111,10 @@ html {
     width: 80%;
 }
 .ten-twelths {
-    width: 83.333%;
+    width: 83.33333%;
 }
 .eleven-twelths {
-    width: 91.667%;
+    width: 91.66667%;
 }
 
 /* just to see grid boxes */
@@ -120,4 +126,10 @@ html {
 }
 .placeholder:nth-child(even) {
     background: grey;
+}
+
+p {
+    font-family: Georgia, serif;
+    font-weight: 600;
+    font-size: 1em;
 }
