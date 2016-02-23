@@ -1,0 +1,82 @@
+@import url('//cdn.jsdelivr.net/font-zero-width/latest/zero-width.css');
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*
+ * This grid system uses the zero-width font https://github.com/patrickkunka/zero-width
+ * to remove white space between inline blocks
+ */
+.grid {
+    font-family: 'zero-width';
+    font-size: 0;
+}
+.grid > * {
+    font-family: 'helvetica';
+    font-size: 1rem; 
+}
+.full-width,
+.one-half,
+.one-quarter,
+.two-quarters,
+.three-quarters,
+.one-third,
+.two-thirds,
+.one-fifth,
+.two-fifths,
+.three-fifths,
+.four-fifths {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    
+    background: #eee;
+    border: 1px solid #ccc;
+}
+.full-width {
+    display: block;
+}
+.one-half {
+    width: 50%;
+}
+.one-quarter {
+    width: 25%;
+}
+.two-quarters {
+    width: 50%;   
+}
+.three-quarters {
+    width: 75%;
+}
+.one-third {
+    width: 33.333%;
+}
+.two-thirds {
+    width: 66.667%;
+}
+.one-fifth {
+    width: 20%;
+}
+.two-fifths {
+    width: 40%;
+}
+.three-fifths {
+    width: 60%;
+}
+.four-fifths {
+    width: 80%;
+}
+
+/* just to see grid boxes */
+.placeholder {
+    background: pink;
+    padding: 50px 0;
+    text-align: center;
+}
+.placeholder:nth-child(even) {
+    background: grey;
+}
