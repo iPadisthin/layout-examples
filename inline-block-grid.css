@@ -1,5 +1,8 @@
 @import url('//cdn.jsdelivr.net/font-zero-width/latest/zero-width.css');
 
+body {
+    margin: 0;
+}
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
@@ -7,6 +10,8 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+
 /*
  * This grid system uses the zero-width font https://github.com/patrickkunka/zero-width
  * to remove white space between inline blocks
@@ -14,6 +19,9 @@ html {
 .grid {
     font-family: 'zero-width';
     font-size: 0;
+    
+    max-width: 960px;
+    margin: 0 auto;
 }
 .grid > * {
     font-family: 'helvetica';
@@ -32,7 +40,7 @@ html {
 .four-fifths {
     display: inline-block;
     vertical-align: top;
-    padding: 20px;
+    padding: 10px;
     
     background: #eee;
     border: 1px solid #ccc;
@@ -76,6 +84,7 @@ html {
     background: pink;
     padding: 50px 0;
     text-align: center;
+    margin: 0;
 }
 .placeholder:nth-child(even) {
     background: grey;
