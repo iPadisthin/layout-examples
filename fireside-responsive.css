@@ -249,3 +249,32 @@ nav a:hover {
 .eleven-twelths {
     width: 91.66667%;
 }
+
+/* let's make it responsive - this is desktop first */
+
+/* 
+ * setting max-width: 100% on images makes sure they 
+ * are never bigger than their container
+ *
+ * resize the browser window to see the image resize
+ */
+img {
+    max-width: 100%;
+}
+
+/* mobile style overrides */
+@media only screen and (max-width: 768px) {
+    
+    /* make one-third columns stack (full width) */
+    .one-third,
+    .four-twelths {
+        width: 100%;
+    }
+    
+    /* we could do similarly to other grids */
+    
+    /* 
+     * but you can probably see that just stacking grid boxes is not going
+     * to be enough, we'll need to restyle our content to suit too
+     */
+}
